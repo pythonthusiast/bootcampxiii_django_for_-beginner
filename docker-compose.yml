@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:10.1
+    volumes:
+      - postgresql-volume:/var/lib/postgresql/data
+
+  djangoapp:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    command: ./entrypoint.sh
+
+volumes:
+  postgresql-volume: # local to Linux, but in Windows it is not accessible
