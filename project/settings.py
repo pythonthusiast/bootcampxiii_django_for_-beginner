@@ -25,7 +25,7 @@ SECRET_KEY = 'eoacml86fzx2lz^$pl88(7=4%-g#)#-d%j%tyy0w@hz4ou)rn*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangoapp']
 
 
 # Application definition
